@@ -1,0 +1,47 @@
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" id="contents">
+    <meta charset="UTF-8">
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../js/script.js"></script>
+    <section>
+        <br>
+        <h1>예방접종등록</h1>
+        <br>
+        <form name="inoutForm" action="regist" method="post">
+            <table>
+                <tr>
+                    <td class="align-center size-150">예방접종이력번호</td>
+                    <td class="size-400">
+                        <input type="text" name="p_seno" th:value="${nextno}">예)20200001
+                    </td>
+                </tr>
+                <tr>
+                    <td class="align-center">고객번호</td>
+                    <td>
+                        <input type="text" name="p_no">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="align-center">백신코드</td>
+                    <td>
+                        <input type="text" name="i_code">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="align-center">접종일자</td>
+                    <td>
+                        <input type="text" name="p_date">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="align-center" colspan=2>
+                        <input type="button" onclick="registInout()" value="예방접종등록">
+                        <input type="reset" onclick="resetForm()" value="다시쓰기">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+</div>
+</html>

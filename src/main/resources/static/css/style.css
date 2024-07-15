@@ -1,0 +1,130 @@
+//* 기본 스타일 설정 */
+ body {
+     font-family: Arial, sans-serif;
+     line-height: 1.6;
+     margin: 0;
+     padding: 0;
+     background-color: #f4f4f4;
+ }
+
+ /* 헤더 스타일 */
+ header {
+     background: #FF9A8A;
+     color: #fff;
+     padding: 30px 0;
+     text-align: center;
+ }
+
+ .header-title {
+     margin: 0;
+     font-size: 24px;
+ }
+
+ /* 네비게이션 스타일 */
+ nav {
+     background: #FFBE98;
+     color: #fff;
+     padding: 10px 0;
+ }
+
+ nav ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     justify-content: center;
+ }
+
+ nav ul li {
+     margin: 0 15px;
+ }
+
+ nav ul li a {
+     color: #fff;
+     text-decoration: none;
+     padding: 5px 10px;
+ }
+
+ nav ul li a:hover {
+     background: #A6C2AE;
+     border-radius: 5px;
+ }
+
+ /* 컨텐츠 스타일 */
+ #contents {
+     padding: 20px;
+     background: #FFF;
+     margin: 20px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+ }
+
+ section h1 {
+     color: #333;
+     text-align: center;
+ }
+
+ section h2 {
+     color: #666;
+     text-align: center;
+ }
+
+ section d1 dt {
+     font-weight: bold;
+     text-align: center;
+     margin-top: 50px;
+     margin-bottom: 20px;
+ }
+
+ section d1 dd {
+     text-align: center;
+     margin-left: 20px;
+ }
+
+ /* 푸터 스타일 */
+ footer {
+     background: #FF9A8A;
+     color: #fff;
+     text-align: center;
+     padding: 10px 0;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+ }
+
+ .footer-content {
+     margin: 0;
+ }
+ th, td{
+    border-style:solid;
+    border-width:1px;
+    border-color:#666;
+    font-size:18px;
+
+ }
+ table{
+
+    margin: 0 auto;
+ }
+
+ .size-100{
+    width:100px;
+ }
+ .size-150{
+    width:150px;
+ }
+ .align-center{
+    text-align:center;
+ }
+ .align-right{
+    text-align:right;
+ }
+ .size-400{
+    width:400px;
+ }
+ .size-200{
+    width:200px;
+ }
+ .size-50{
+    width:50px;
+ }

@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>예방접종 프로그램</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="/js/script.js"></script>
+  </head>
+    <body>
+      <header>
+        <h1 class="header-title">예방접종 프로그램</h1>
+      </header>
+      <nav>
+        <ul id="menu">
+          <li><a th:href="@{/customers}">고객조회</a></li>
+          <li><a th:href="@{/order}">예방접종등록</a></li>
+          <li><a th:href="@{/record}">접종이력조회</a></li>
+          <li><a th:href="@{/injection}">백신별접종건수</a></li>
+          <li><a th:href="@{/}">홈으로</a></li>
+        </ul>
+      </nav>
+
+        <th:block layout:fragment="content"></th:block>
+
+      <footer>
+        <p class="footer-content">copyright &copy; 2024 KOREA INFORMATION TECHNOLOGY ACADEMY. ALL RIGHTS RESERVED</p>
+      </footer>
+    </body>
+</html>

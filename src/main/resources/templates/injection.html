@@ -1,0 +1,24 @@
+<html layout:decorate="~{layout}" xmlns:th="http://www.thymeleaf.org">
+<div layout:fragment="content" id="contents">
+    <meta charset="UTF-8">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <section>
+        <br>
+        <h1>백신별접종건수</h1>
+        <br>
+        <table>
+            <tr>
+                <th class="size-150 align-center">백신코드</th>
+                <th class="size-150 align-center">백신주사명</th>
+                <th class="size-150 align-center">백신별총건수</th>
+            </tr>
+            <tr th:each="dto : ${list}">
+                <td class="align-center" th:text="${dto.get('a')}"></td>
+                <td class="align-center" th:text="${dto.get('b')}"></td>
+                <td class="align-center" th:text="${dto.get('c')}"></td>
+            </tr>
+        </table>
+    </section>
+</div>
+</html>

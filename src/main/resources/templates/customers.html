@@ -1,0 +1,35 @@
+<html layout:decorate="~{layout}">
+    <div layout:fragment="content" id="contents">
+        <meta charset="UTF-8">
+        <script src="/js/script.js"></script>
+        <title>고객 조회</title>
+
+        <section>
+            <br>
+            <h1>고객 조회</h1>
+            <br>
+            <table>
+                <tr>
+                    <th class="size-100 align-center">고객번호</th>
+                    <th class="size-100 align-center">고객명</th>
+                    <th class="size-200 align-center">고객생년월일</th>
+                    <th class="size-50 align-center">성별</th>
+                    <th class="size-200 align-center">전화번호</th>
+                    <th class="size-100 align-center">지역</th>
+                </tr>
+                <tr th:each="dto : ${customers}">
+                    <td class="align-center" th:text="${dto.p_no}"></td>
+                    <td class="align-center" th:text="${dto.p_name}"></td>
+                    <td class="align-center">
+                        <span th:text="${dto.formattedBday + ' (' + dto.age + ')'}"></span>
+                    </td>
+                    <td class="align-center" th:text="${dto.p_gender == 'M' ? '남' : '여'}"></td>
+                    <td class="align-center" th:text="${dto.p_tel1 + '-' + dto.p_tel2 + '-' + dto.p_tel3}"></td>
+                    <td class="align-center" th:text="${dto.p_city}"></td>
+                </tr>
+            </table>
+
+        </section>
+    </div>
+</html>
+

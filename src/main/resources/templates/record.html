@@ -1,0 +1,29 @@
+<html layout:decorate="~{layout}">
+  <div layout:fragment="content" id="contents">
+    <meta charset="UTF-8">
+    <link href="../css/style.css" rel="stylesheet">
+    <section>
+      <br>
+      <h1>접종이력조회</h1>
+      <br>
+      <table>
+        <tr>
+          <th class="size-150 align-center">예방접종이력번호</th>
+          <th class="size-100 align-center">고객번호</th>
+          <th class="size-100 align-center">고객명</th>
+          <th class="size-100 align-center">백신코드</th>
+          <th class="size-150 align-center">백신주사명</th>
+          <th class="size-150 align-center">접종일자</th>
+        </tr>
+        <tr th:each="dto : ${list}">
+          <td class="align-center" th:text="${#strings.substring(dto.p_seno, 0, 4) + '-' + #strings.substring(dto.p_seno, 4)}"></td>
+          <td class="align-center" th:text="${dto.p_no}"></td>
+          <td class="align-center" th:text="${dto.p_name}"></td>
+          <td class="align-center" th:text="${dto.i_code}"></td>
+          <td class="align-center" th:text="${dto.i_name}"></td>
+          <td class="align-center" th:text="${dto.p_date}"></td>
+        </tr>
+      </table>
+    </section>
+  </div>
+</html>
